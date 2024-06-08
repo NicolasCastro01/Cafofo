@@ -21,7 +21,7 @@ server.listen(PORT, () => {
 
 const io = new Server(server, {
     cors: {
-        origin: ["zap-2.vercel.app", "zap-2-nicolascastro01.vercel.app"]
+        origin: ["*"]
     }
 });
 

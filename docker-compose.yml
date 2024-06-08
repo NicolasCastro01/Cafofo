@@ -2,26 +2,26 @@ version: '3'
 
 services:
   app:
-  container_name: back
-  env_file: ./back/.env
-  ports:
-      - 3001:3001
-  build: 
-  context: .
-  dockerfile: ./back.dockerfile
-  volumes:
-      - ./back:/back
-      - /back/node_modules
-  networks:
-      - chat-network
-  tty: true
-  command: ["npm", "run", "dev"]
+        container_name: back
+        env_file: ./back/.env
+        ports:
+                - 3001:3001
+        build: 
+                context: .
+                dockerfile: ./back.dockerfile
+        volumes:
+                - ./back:/back
+                - /back/node_modules
+        networks:
+                - chat-network
+        tty: true
+        command: ["npm", "run", "dev"]
 
   web:
     container_name: front
     env_file: ./front/.env
     ports:
-    - 8080:8080
+    - 8080:3000
     build: 
       context: .
       dockerfile: ./front.dockerfile

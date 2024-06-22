@@ -9,7 +9,8 @@ export class SocketClientBuilder {
         this.io = io(this.socketServerUrl, {
             extraHeaders: {
                 "Access-Control-Allow-Origin": "*"
-            }
+            },
+	    transports: ['websocket', 'polling', 'flashsocket']
         });
     }
 

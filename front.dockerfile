@@ -11,7 +11,7 @@ RUN npm run build
 
 
 # Production Stage
-FROM node:latest AS PRODUCTION_STAGE
+FROM node:alpine AS PRODUCTION_STAGE
 WORKDIR /app
 COPY --from=BUILD_IMAGE /app/package.json ./
 COPY --from=BUILD_IMAGE /app/yarn.lock ./

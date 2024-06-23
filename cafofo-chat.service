@@ -1,0 +1,17 @@
+[Unit]
+Description=Cafofo Chat Service
+
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=exec
+User=ubuntu
+WorkingDirectory=/projects/cafofo-chat
+ExecStart=/projects/cafofo-chat
+
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

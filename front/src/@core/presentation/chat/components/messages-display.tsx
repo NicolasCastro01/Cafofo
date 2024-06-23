@@ -11,7 +11,7 @@ export default function MessagesDisplay({ children, displayRef, usersTyping }: M
         }
 
         return (
-            <p className="text-white absolute bottom-1.5 right-2 font-mono">{usersTyping?.length === 1 ? `${usersTyping[0]} is typing...` : 'many people are typing...'}</p>
+            <p className="fixed text-white absolute bottom-1.5 right-2 font-mono">{usersTyping?.length === 1 ? `${usersTyping[0]} is typing...` : 'many people are typing...'}</p>
         );
     }
 

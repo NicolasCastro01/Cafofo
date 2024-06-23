@@ -9,7 +9,6 @@ RUN yarn install --frozen-lockfile
 COPY ./front/ .
 RUN npm run build
 
-
 # Production Stage
 FROM node:alpine AS PRODUCTION_STAGE
 WORKDIR /app
